@@ -25,7 +25,7 @@ function generate() {
     label.push($j(this).val());
   });
   
-  $j("input[name=input_type] option:selected").each(function() {
+  $j("select[name=input_type]").each(function() {
     input_type.push($j(this).val());
   });
   
