@@ -10,5 +10,5 @@ function insert_row(loop) {
 }
 
 $j(document).ready(function(){
-  insert_row();
+  insert_row(3);
 });
