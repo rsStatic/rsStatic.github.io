@@ -16,9 +16,13 @@ function init() {
 }
 
 function generate() {
-  $j("td").each(function() {
-    console.log("each function");
-  });
+  for (var x in label) {
+    console.log(label[x]);
+  }
+  
+  /*$j("td").each(function() {
+    console.log();
+  });*/
   //$j("#form_output").append(for (var i in ));
 }
 
