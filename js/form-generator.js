@@ -22,7 +22,7 @@ function generate() {
   var value = new Array();
   
   $j("input[name=label]").each(function() {
-    label.push($(this).val());
+    label.push($j(this).val());
   });
   
   console.log(label[1]);
