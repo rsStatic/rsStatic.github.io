@@ -16,7 +16,7 @@ function init() {
 }
 
 function generate() {
-  $("#form_output").hide();
+  $j("#form_output").hide();
 }
 
 $j(document).ready(function(){
