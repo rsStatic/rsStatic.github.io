@@ -16,7 +16,7 @@ function init() {
 }
 
 function generate() {
-  $j("#form_output").hide();
+  $j("#form_output").append("this is just a text message");
 }
 
 $j(document).ready(function(){
