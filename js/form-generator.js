@@ -6,10 +6,6 @@ function insert_row() {
   $j("tr").after('<tr><td><input id="label[0]" type="text" /></td><td><select id="input_type[0]"><option value="text">Text</option><option value="options">Options</option></select></td><td><input id="ID[0]" type="text" /></td><td><input id="value[0]" type="text" /></td><td style="text-align: center;"><a onclick="insert_row()">+</a></td></tr>');
 }
 
-function init() {
-  insert_row();
-}
-
 $j(document).ready(function(){
-  init();
+  insert_row();
 });
