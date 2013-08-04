@@ -25,7 +25,11 @@ function generate() {
     label.push($j(this).val());
   });
   
-  console.log(label[1]);
+  $j("input[name=input_type]").each(function() {
+    input_type.push($j(this).val());
+  });
+  
+  console.log(input_type[1]);
 }
 
 $j(document).ready(function(){
