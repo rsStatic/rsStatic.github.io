@@ -3,6 +3,7 @@
 $j=jQuery.noConflict();
 
 function insert_row(loop) {
+  console.log("Value: " + loop);
   loop = loop || 1;
   loop = parseInt(loop);
   for(i=0;i<loop;i++)
