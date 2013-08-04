@@ -5,7 +5,7 @@ $j=jQuery.noConflict();
 var row = 0;
 
 function insert_row() {
-  $j("tr:last").after('<tr><td><input id="label['+row+']" type="text" /></td><td><select id="input_type['+row+']"><option value="text">Text</option><option value="options">Options</option></select></td><td><input id="ID['+row+']" type="text" /></td><td><input id="value['+row+']" type="text" /></td><td style="text-align: center;"><a onclick="insert_row()" style="font-size:1.5em; margin:0; padding:0">+</a></td></tr>');
+  $j("tr:last").after('<tr><td><input id="label['+row+']" name="label" type="text" /></td><td><select name="input_type" id="input_type['+row+']"><option value="text">Text</option><option value="options">Options</option></select></td><td><input name="id" id="ID['+row+']" type="text" /></td><td><input id="value['+row+']" type="text" /></td><td style="text-align: center;"><a onclick="insert_row()" style="font-size:1.5em; margin:0; padding:0">+</a></td></tr>');
   row++;
 }
 
@@ -16,14 +16,16 @@ function init() {
 }
 
 function generate() {
-  for (var x in label) {
-    console.log(label[x]);
-  }
+  var label = new Array();
+  var input_type = new Array();
+  var id = new Array();
+  var value = new Array();
   
-  /*$j("td").each(function() {
-    console.log();
-  });*/
-  //$j("#form_output").append(for (var i in ));
+  $j("input[name=label]").each(function() {
+    label.push($(this).val());
+  });
+  
+  console.log(label[1]);
 }
 
 $j(document).ready(function(){
