@@ -7,6 +7,6 @@ function insert_row() {
 }
 
 $j(document).ready(function(){
-  insert_row();
+  //insert_row();
   
 });
