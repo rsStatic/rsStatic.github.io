@@ -16,7 +16,10 @@ function init() {
 }
 
 function generate() {
-  $j("#form_output").append("this is just a \ntext message");
+  $j("td").each(function() {
+    console.log("each function");
+  });
+  //$j("#form_output").append(for (var i in ));
 }
 
 $j(document).ready(function(){
