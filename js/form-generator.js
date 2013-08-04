@@ -29,7 +29,15 @@ function generate() {
     input_type.push($j(this).val());
   });
   
-  console.log(input_type[1]);
+  $j("input[name=id]").each(function() {
+    id.push($j(this).val());
+  });
+  
+  $j("input[name=value]").each(function() {
+    value.push($j(this).val());
+  });
+  
+  console.log("id:" + id[1] + "value:" + value[1]);
 }
 
 $j(document).ready(function(){
