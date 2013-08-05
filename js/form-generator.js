@@ -53,6 +53,7 @@ function generate() {
     var type = input_type[a];
     if (type == "text") {
       output += '<input type="text" id="' + id[a] + '"';
+      value=value[a];
       if (value != ' ') output += ' value="' + value[a] +'"'
       output += '/>\n';
     } else if (input_type[a] == "options") {
