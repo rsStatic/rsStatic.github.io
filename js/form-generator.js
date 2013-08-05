@@ -64,7 +64,7 @@ function generate() {
       for (var b=0;b<values.length;b++) {
         output += '  <option value="' + $j.trim(values[b]) + '">' + $j.trim(values[b]) + '</option>\n';
       }      
-      output += '</select>';
+      output += '</select>\n';
     }
     if ($j("#option_table").is(":checked")) output += '</td>\n</tr>';
     output += '\n';
