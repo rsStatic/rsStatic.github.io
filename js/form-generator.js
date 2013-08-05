@@ -39,12 +39,16 @@ function generate() {
   
   var output = "";
   for (a=0;a<label.length;a++) {
-    output += '<label for="'+ id[a] + '">' + label[a] + '</label>';
-    
-    output += '\n';
+    output += '<label for="'+ id[a] + '">' + label[a] + '</label>\n';
+    output += '<input type="'+ input_type[a] + '">\n';    
+    output += '\n\n';
   }
   
   $j("#output").text(output);
+  
+  if(output.contains("undefined")) {
+    $j(".error").text("Umm... Looks like you didn't fill in all fields or something.");
+  }
 }
 
 $j(document).ready(function(){
