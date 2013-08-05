@@ -46,7 +46,7 @@ function generate() {
   });
   
   var output = "";
-  if ($j("#option_table").is(":checked")) output += '<table>';
+  if ($j("#option_table").is(":checked")) output += '<table>\n';
   for (a=0;a<label.length;a++) {
     if ($j("#option_table").is(":checked")) output += '<tr>\n<td>\n';
     output += '<label for="'+ id[a] + '">' + label[a] + '</label>';
@@ -66,7 +66,7 @@ function generate() {
       }      
       output += '</select>';
     }
-    if ($j("#option_table").is(":checked")) output += '\n</td>\n</tr>';
+    if ($j("#option_table").is(":checked")) output += '</td>\n</tr>';
     output += '\n';
   }
   if ($j("#option_table").is(":checked")) output += '</table>';
