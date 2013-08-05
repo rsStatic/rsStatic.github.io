@@ -20,9 +20,7 @@ function generate() {
   var input_type = new Array();
   var id = new Array();
   var value = new Array();
-  
-  $.trim(
-  
+    
   $j("input[name=label]").each(function() {
     if ($j(this).val() != "") label.push($j.trim($j(this).val()));
   });
