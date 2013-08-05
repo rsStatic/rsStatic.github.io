@@ -46,10 +46,13 @@ function generate() {
   });
   
   var output = "";
+  if ($j("#option_table").is(":checked")) output += '<table>';
   for (a=0;a<label.length;a++) {
+    if ($j("#option_table").is(":checked")) output += '<tr>\n<td>\n';
     output += '<label for="'+ id[a] + '">' + label[a] + '</label>';
     if ($j("#option_br").is(":checked")) output += '<br />';
     output += '\n';
+    if ($j("#option_table").is(":checked")) output += '</td>\n<td>\n';
     var type = input_type[a];
     if (type == "text") {
       output += '<input type="text" id="' + id[a] + '"';
@@ -62,9 +65,11 @@ function generate() {
         output += '  <option value="' + $j.trim(values[b]) + '">' + $j.trim(values[b]) + '</option>\n';
       }      
       output += '</select>';
-    }    
+    }
+    if ($j("#option_table").is(":checked")) output += '\n</td>\n</tr>';
     output += '\n';
   }
+  if ($j("#option_table").is(":checked")) output += '</table>';
   
   $j("#output").text(output);
 }
