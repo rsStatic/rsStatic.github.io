@@ -50,7 +50,7 @@ function generate() {
       output += '<select id=' + id[a] + '>\n';
       var values = value[a].split(',');
       for (var b=0;b<values.length;b++) {
-        output += '  <option value="' + values[b] + '">' + values[b] + '</option>\n';
+        output += '  <option value="' + $j.trim(values[b]) + '">' + $j.trim(values[b]) + '</option>\n';
       }      
       output += '</select>';
     }    
