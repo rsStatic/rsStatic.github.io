@@ -22,19 +22,19 @@ function generate() {
   var value = new Array();
   
   $j("input[name=label]").each(function() {
-    label.push($j(this).val());
+    if ($j(this).val() != "") label.push($j(this).val());
   });
   
   $j("select[name=input_type]").each(function() {
-    input_type.push($j(this).val());
+    if ($j(this).val() != "") input_type.push($j(this).val());
   });
   
   $j("input[name=id]").each(function() {
-    id.push($j(this).val());
+    if ($j(this).val() != "") id.push($j(this).val());
   });
   
   $j("input[name=value]").each(function() {
-    value.push($j(this).val());
+    if ($j(this).val() != "") value.push($j(this).val());
   });
   
   console.log("id:" + id[1] + "value:" + value[1]);
