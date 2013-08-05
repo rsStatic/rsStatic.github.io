@@ -46,8 +46,9 @@ function generate() {
   
   var output = "";
   for (a=0;a<label.length;a++) {
-    output += '<label for="'+ id[a] + '">' + label[a] + '</label>\n';
-    console.log(input_type[a]);
+    output += '<label for="'+ id[a] + '">' + label[a] + '</label>';
+    if ($j("#option_br").is(":checked")) output += '<br />';
+    output += '\n';
     var type = input_type[a];
     if (type == "text") {
       output += '<input type="text" id="' + id[a] + '"';
