@@ -62,7 +62,7 @@ function generate() {
       }      
       output += '</select>';
     }    
-    output += '\n\n';
+    output += '\n';
   }
   
   $j("#output").text(output);
