@@ -41,7 +41,8 @@ function generate() {
   for (a=0;a<label.length;a++) {
     output += '<label for="'+ id[a] + '">' + label[a] + '</label>\n';
     
-    if (input_type[a] == "Text") {
+    var type = input_type[a];
+    if (type == "Text") {
       output += '<input type="text" id="' + id[a] + '"';
       if (value != ' ') output += ' value="' + value[a] +'"'
       output += '/>\n';
