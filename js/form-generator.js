@@ -56,7 +56,7 @@ function generate() {
   $j("#output").text(output);
   
   if(output.contains("undefined")) {
-    $j(".error").text("Umm... Looks like you didn't fill in all fields or something.");
+    $j(".error").text("Umm... Looks like something went wrong. Check the form please. :/");
   }
 }
 
