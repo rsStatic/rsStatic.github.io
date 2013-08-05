@@ -21,20 +21,22 @@ function generate() {
   var id = new Array();
   var value = new Array();
   
+  $.trim(
+  
   $j("input[name=label]").each(function() {
-    if ($j(this).val() != "") label.push($j(this).val());
+    if ($j(this).val() != "") label.push($j.trim($j(this).val()));
   });
   
   $j("select[name=input_type]").each(function() {
-    if ($j(this).val() != "") input_type.push($j(this).val());
+    if ($j(this).val() != "") input_type.push($j.trim($j(this).val()));
   });
   
   $j("input[name=id]").each(function() {
-    if ($j(this).val() != "") id.push($j(this).val());
+    if ($j(this).val() != "") id.push($j.trim($j(this).val()));
   });
   
   $j("input[name=value]").each(function() {
-    if ($j(this).val() != "") value.push($j(this).val());
+    if ($j(this).val() != "") value.push($j.trim($j(this).val()));
   });
   
   console.log("id:" + id[1] + "value:" + value[1]);
