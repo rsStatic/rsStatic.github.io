@@ -40,7 +40,7 @@ function generate() {
   var output = "";
   for (a=0;a<label.length;a++) {
     output += '<label for="'+ id[a] + '">' + label[a] + '</label>\n';
-    output += '<input type="'+ input_type[a] + '">\n';    
+    output += '<input type="'+ input_type[a] + '" />\n';    
     output += '\n\n';
   }
   
