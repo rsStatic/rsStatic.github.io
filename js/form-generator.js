@@ -13,7 +13,7 @@ function init() {
   for(i=0;i<3;i++) {
     insert_row();
   }
-  $j("table").css('opacity', 1);
+  $j("table").css({opacity: 1});
   $j("#init").remove();
 }
 
