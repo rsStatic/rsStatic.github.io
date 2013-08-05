@@ -47,9 +47,12 @@ function generate() {
       if (value != ' ') output += ' value="' + value[a] +'"'
       output += '/>\n';
     } else if (input_type[a] == "options") {
-      //output += 
+      output += '<select id=' + id[a] + '>';
+      
+      output += value[a];
+      
+      output += '</select>';
     }    
-    
     output += '\n\n';
   }
   
