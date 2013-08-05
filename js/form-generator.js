@@ -37,7 +37,12 @@ function generate() {
     if ($j.trim($j(this).val()) != "") value.push($j.trim($j(this).val()));
   });
   
-  console.log("id:" + id[1] + "value:" + value[1]);
+  var output;
+  for (a=0;a<label.length;a++) {
+    output += '<label for="'+id[a]+'">'+label[a]+'</label>';
+  }
+  
+  $j("#output").append(output);
 }
 
 $j(document).ready(function(){
