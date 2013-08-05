@@ -37,7 +37,7 @@ function generate() {
     if ($j.trim($j(this).val()) != "") value.push($j.trim($j(this).val()));
   });
   
-  var output;
+  var output = "";
   for (a=0;a<label.length;a++) {
     output += 'Output #' + a + '\n';
   }
