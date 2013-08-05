@@ -13,6 +13,7 @@ function init() {
   for(i=0;i<3;i++) {
     insert_row();
   }
+  $j("table").css('display', 'inline');
   $j("#init").remove();
 }
 
