@@ -13,8 +13,9 @@ function init() {
   for(i=0;i<3;i++) {
     insert_row();
   }
+  $j("#init").fadeOut(400).remove();
   $j("table").css({opacity: 1});
-  $j("#init").remove();
+  
 }
 
 $j("#toggle_options").click(function() {
