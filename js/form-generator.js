@@ -39,7 +39,7 @@ function generate() {
   
   var output = "";
   for (a=0;a<label.length;a++) {
-    output += 'Output #' + a + '\n';
+    output += label[a] + '\n';
   }
   
   $j("#output").text(output);
