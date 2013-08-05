@@ -47,8 +47,8 @@ function generate() {
       if (value != ' ') output += ' value="' + value[a] +'"'
       output += '/>\n';
     } else if (input_type[a] == "options") {
-      output += '<select id=' + id[a] + '>';
-      var values = value[a].split(' -- ');
+      output += '<select id=' + id[a] + '>\n';
+      var values = value[a].split(',');
       for (var b=0;b<values.length;b++) {
         output += '  <option value="' + values[b] + '">' + values[b] + '</option>\n';
       }      
