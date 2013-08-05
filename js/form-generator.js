@@ -42,11 +42,11 @@ function generate() {
     output += '<label for="'+ id[a] + '">' + label[a] + '</label>\n';
     console.log(input_type[a]);
     var type = input_type[a];
-    if (type == "Text") {
+    if (type == "text") {
       output += '<input type="text" id="' + id[a] + '"';
       if (value != ' ') output += ' value="' + value[a] +'"'
       output += '/>\n';
-    } else if (input_type[a] == "Options") {
+    } else if (input_type[a] == "options") {
       //output += 
     }    
     
