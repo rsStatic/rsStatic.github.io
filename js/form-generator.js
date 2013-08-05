@@ -14,7 +14,7 @@ function init() {
     insert_row();
   }
   $j("#init").fadeOut(400);
-  $j("table").css({opacity: 1});
+  $j("table").delay(400).css({opacity: 1});
   
 }
 
