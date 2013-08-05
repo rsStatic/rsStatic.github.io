@@ -53,8 +53,7 @@ function generate() {
     var type = input_type[a];
     if (type == "text") {
       output += '<input type="text" id="' + id[a] + '"';
-      value=value[a];
-      if (value != ' ') output += ' value="' + value[a] +'"'
+      output += ' value="' + $j.trim(value[a]) +'"'
       output += '/>\n';
     } else if (input_type[a] == "options") {
       output += '<select id=' + id[a] + '>\n';
