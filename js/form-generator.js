@@ -39,10 +39,10 @@ function generate() {
   
   var output;
   for (a=0;a<label.length;a++) {
-    output += '<label for="'+id[a]+'">'+label[a]+'</label>';
+    output += 'Output #' + a + '\n';
   }
   
-  $j("#output").append(output);
+  $j("#output").text(output);
 }
 
 $j(document).ready(function(){
