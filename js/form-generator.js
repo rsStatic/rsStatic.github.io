@@ -15,6 +15,13 @@ function init() {
   }
 }
 
+$j("#toggle_options").click(function() {
+  if($j("#additional").is(":visible"))
+    $j("#additional").fadeOut(300);
+  else
+    $j("#additional").fadeIn(300);
+});
+
 function generate() {
   var label = new Array();
   var input_type = new Array();
