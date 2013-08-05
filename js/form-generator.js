@@ -5,7 +5,7 @@ $j=jQuery.noConflict();
 var row = 0;
 
 function insert_row() {
-  $j("tr:last").after('<tr><td><input id="label['+row+']" name="label" type="text" /></td><td><select name="input_type" id="input_type['+row+']"><option value="text">Text</option><option value="options">Options</option></select></td><td><input name="id" id="ID['+row+']" type="text" /></td><td><input name="value" id="value['+row+']" type="text" /></td><td style="text-align: center;"><a onclick="insert_row()" style="font-size:1.5em; margin:0; padding:0">+</a></td></tr>');
+  $j("tr:last").after('<tr><td><input id="label['+row+']" name="label" type="text" /></td><td><select name="input_type" id="input_type['+row+']"><option value="text">Text</option><option value="options">Options</option></select></td><td><input name="id" id="ID['+row+']" type="text" /></td><td><input name="value" id="value['+row+']" value=" " type="text" /></td><td style="text-align: center;"><a onclick="insert_row()" style="font-size:1.5em; margin:0; padding:0">+</a></td></tr>');
   row++;
 }
 
@@ -34,13 +34,21 @@ function generate() {
   });
   
   $j("input[name=value]").each(function() {
-    if ($j.trim($j(this).val()) != "") value.push($j.trim($j(this).val()));
+    if ($j(this).val() != "") value.push($j(this).val());
   });
   
   var output = "";
   for (a=0;a<label.length;a++) {
     output += '<label for="'+ id[a] + '">' + label[a] + '</label>\n';
-    output += '<input type="'+ input_type[a] + '" />\n';    
+    
+    if (input_type[a] == "Text") {
+      output += '<input type="text" id="' + id[a] + '"';
+      if (value != ' ') output += ' value="' + value[a] +'"'
+      output += '/>\n';
+    } else if (input_type[a] == "Options") {
+      //output += 
+    }    
+    
     output += '\n\n';
   }
   
