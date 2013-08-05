@@ -13,7 +13,7 @@ function init() {
   for(i=0;i<3;i++) {
     insert_row();
   }
-  $j("#init").fadeOut(5750);
+  $j("#init").fadeOut(400);
   $j("table").css({opacity: 1});
   
 }
