@@ -49,6 +49,10 @@ jQuery(function() {
     output += "decalfrequency\t"+parseInt(jQuery("#decalfrequency").val())+"\n";
     output += "sv_maxupdaterate\t"+parseInt(jQuery("#sv_maxupdaterate").val())+"\n";
     output += "sv_minupdaterate\t"+parseInt(jQuery("#sv_minupdaterate").val())+"\n";
+    output += "//Execute ban files\n"
+    output += "Server Settings\n"
+    output += "exec banned_ip.cfg\n"
+    output += "exec banned_user.cfg\n"
     jQuery("#output").text(output);
   });
   jQuery("#download").click(function() {
