@@ -5,6 +5,6 @@ echo If you want to close srcds and this script, close the srcds window and type
 title srcds.com Watchdog
 :srcds
 echo (%time%) srcds started.
-start /wait srcds.exe -console -game terrortown +map de_dust +maxplayers 16
+start /wait srcds.exe -console -game garrysmod +map de_dust +maxplayers 16 +gamemode terrortown
 echo (%time%) WARNING: srcds closed or crashed, restarting.
 goto srcds
