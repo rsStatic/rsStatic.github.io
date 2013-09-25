@@ -1,0 +1,47 @@
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+</head>
+
+<script>
+var lengte  = parseFloat(prompt('Lengte (m):'));
+var gewicht = parseFloat(prompt('Gewicht (kg):'));
+
+var bmi = (gewicht / (lengte*lengte));
+var ideaal_gewicht = Math.round((lengte*lengte)*25);
+
+if (gewicht < 0 || gewicht > 500 || lengte < 0.4 || lengte > 3 || isNaN(lengte) || isNaN(gewicht)) {
+	alert('Error! Probeer opnieuw (met geldige waarden).');
+} else if (bmi < 18) {
+	alert('ondergewicht');
+	alert('Uw ideale gewicht is ' + ideaal_gewicht + '. U moet ' + (ideaal_gewicht-gewicht) + 'kg bijkomen om dit gewicht te bereiken.');
+} else if (bmi >= 18 && bmi <= 25) {
+	alert('normaal gewicht');
+} else if (bmi > 25 && bmi < 30) {
+	alert('overgewicht');
+	alert('Uw ideale gewicht is ' + ideaal_gewicht + '. U moet ' + (gewicht-ideaal_gewicht) + 'kg afvallen om dit gewicht te bereiken.');
+} else {
+	alert('obesitas');
+	alert('Uw ideale gewicht is ' + ideaal_gewicht + '. U moet ' + (gewicht-ideaal_gewicht) + 'kg afvallen om dit gewicht te bereiken.');
+}
+</script>
+
+
+<!--
+2. Schrijf een algoritme "BMI" dat voor een correcte lengte en voor 
+een correct gewicht  het BMI berekent en dit BMI meedeelt aan de gebruiker. 
+Zorg ervoor dat de gebruiker ook op de hoogte gesteld wordt bij foutieve input!
+
+// BMI = gewicht(kg) / (lengte(m))�;
+// foutieve gewichten: < 0; > 500;
+// foutieve lengte  in m!!!: < 0,4; > 3
+
+Bovendien moet je afhankelijk van de bmi volgende boodschap melden:
+
+bmi < 18 ondergewicht
+bmi >= 18 en <= 25 normaal gewicht
+bmi > 25  overgewicht
+bmi >= 30 obesitas
+
+Extra: hoeveel kg moet je afvallen/bijkomen om een normaal gewicht te hebben
+-->
