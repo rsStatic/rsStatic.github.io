@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Keyframe Preloader</title>
+	<link rel="stylesheet" type="text/css" href="https://rawgithub.com/daneden/animate.css/master/animate.min.css"/>
+	<link type="text/css" href="style.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="color-animation.js" type="text/javascript"></script>
+	<script>
+	$(function(){
+		$('#preloader').addClass('animated shake');
+		blink();
+
+		var height = $(window).height;
+		$('#screen2').css({'margin-top': (($(window).height()+35))+'px'});
+
+	});
+	$(window).resize(function(){
+		$('#screen2').css({'margin-top': (($(window).height()+35))+'px'});
+	})
+
+	function blink(){
+		$("#preloader")
+			.animate({backgroundColor: '#C120AD'}, 2000)
+			.animate({backgroundColor: '#20ADC1'}, 2000, function(){
+				blink()
+			});
+	}
+	</script>
+</head>
+<body class="body-noise">
+	<div id="preloader" class="noise" style="overflow:hidden"><div class="text">R+</div></div>
+	<!--<div id="screen2"><div class="arrow"></div>
+		<p><span class="domain">robinschoors.com</span><br/>website under construction</p>
+	</div>-->
+</body>
