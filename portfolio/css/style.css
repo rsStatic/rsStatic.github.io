@@ -48,6 +48,7 @@ h1 {
 #container {
  	width:700px;
  	margin:0 auto;
+ 	display:hidden;
 }
 
 #main_header {
