@@ -1,8 +1,7 @@
 $(window).load(function() {
-	$("#loader").css("background", "none");
-	$("#container").hide().fadeIn();
-
+	$("#preloader").delay(350).slideUp();
+	$("#container").delay(800).fadeIn(1000);
 	$("article").each(function(index){
-		$(this).hide().delay(700).slideDown();
+		$(this).hide().delay(1400).slideDown(600);
 	});
 });

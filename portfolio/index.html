@@ -8,7 +8,15 @@
   	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script>
+	$(window).load(function() {
+		$("#preloader").delay(350).slideUp();
+		$("#container").delay(800).fadeIn(1000);
+		$("article").each(function(index){
+			$(this).hide().delay(1400).slideDown(600);
+		});
+	});
+  </script>
 
   <title>Robin Schoors | robinschoors.com</title>
   <meta name="description" content="My portfolio and virtual playgroud">
@@ -16,6 +24,7 @@
 </head>
 
 <body>
+<div id="preloader"></div>
   <div id="container">
   	<header id="main_header">
   		<h1 class="center">robinschoors.com</h1>
