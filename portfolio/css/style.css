@@ -5,7 +5,7 @@
 * All Rights Reserved
 */
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,500,300,200,100,800,600,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
 
 ::selection {
 	background:#FFF;
@@ -39,7 +39,7 @@ h1 {
 }
 
 .bold {
- 	font-weight: bold;
+ 	font-weight: 500;
 }
 
 .clear {
