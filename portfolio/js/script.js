@@ -1,8 +1,8 @@
 $(window).load(function() {
 	$("#loader").css("background", "none");
-	$("#container").hide().delay(100).fadeIn();
+	$("#container").hide().fadeIn();
 
 	$("article").each(function(index){
-		$(this).hide().delay(500).slideDown();
+		$(this).hide().delay(600).slideDown();
 	});
 });
