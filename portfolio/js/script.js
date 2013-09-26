@@ -3,6 +3,6 @@ $(window).load(function() {
 	$("#container").hide().fadeIn();
 
 	$("article").each(function(index){
-		$(this).hide().delay(600).slideDown();
+		$(this).hide().delay(700).slideDown();
 	});
 });
