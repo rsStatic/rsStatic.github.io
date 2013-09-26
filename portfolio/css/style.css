@@ -56,6 +56,26 @@ h1 {
 	clear:both;
 }
 
+#dlc {
+	display:none;
+	width:592px;
+	min-height:200px;
+	background:rgba(0,0,0,0.5);
+	box-shadow:0 0 1px rgba(255,255,255,.5);
+	margin-bottom:10px;
+	padding:4px;
+	font-size:0.8em;
+	font-weight:400;
+}
+
+#dlc a {
+	color:#fff;
+}
+
+#dlc ul {
+	margin-left:25px;
+}
+
 #container {
  	width:700px;
  	margin:0 auto;
@@ -103,7 +123,19 @@ h1 {
 }
 
 #article #transition {
-	background:#20ADC1;
+	background-image: linear-gradient(bottom, rgb(0,131,148) 25%, rgb(32,174,193) 67%);
+	background-image: -o-linear-gradient(bottom, rgb(0,131,148) 25%, rgb(32,174,193) 67%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,131,148) 25%, rgb(32,174,193) 67%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,131,148) 25%, rgb(32,174,193) 67%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,131,148) 25%, rgb(32,174,193) 67%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.25, rgb(0,131,148)),
+		color-stop(0.67, rgb(32,174,193))
+	);
 	color:#fff;
 	width:50px;
 	height:50px;

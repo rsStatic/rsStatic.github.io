@@ -1,0 +1,47 @@
+<head>
+	<title>JavaScript</title>
+	<meta charset="utf-8" />
+</head>
+
+<script>
+function berekenBMI(g,l) {
+	var g = parseFloat(g);
+	var l = parseFloat(l);
+	return Math.round(g/(l*l));
+}
+
+function berekenType(bmi) {
+	var bmi = parseFloat(bmi);
+	if (bmi < 18) {
+		return 'ondergewicht';
+	} else if (bmi >= 18 && bmi <= 25) {
+		return 'normaal gewicht';
+	} else if (bmi > 25 && bmi < 30) {
+		return 'overgewicht';
+	} else {
+		return 'obesitas';
+	}	
+}
+
+function berekenIdeaal(l) {
+	return Math.round((l*l)*25);
+}
+
+function isValid(g,l) {
+	if (g < 30 || g > 500 || l < 0.4 || l > 3 || isNaN(l) || isNaN(g)) {
+		return false;
+	}
+	return true;
+}
+
+
+var lengte  = ((parseFloat(prompt('Lengte (cm):')))/100);
+var gewicht = parseFloat(prompt('Gewicht (kg):'));
+
+
+if (isValid(gewicht,lengte)) {
+	alert('U heeft een BMI van ' + berekenBMI(gewicht,lengte) + " (" + berekenType(berekenBMI(gewicht,lengte)) + ").\nUw ideale gewicht is " + berekenIdeaal(lengte) + "kg.");
+} else {
+	alert('Ongeldige waarden!');
+}
+</script>

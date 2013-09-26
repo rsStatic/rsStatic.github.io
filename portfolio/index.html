@@ -15,6 +15,17 @@
 		$("article").each(function(index){
 			$(this).hide().delay(1400).slideDown(600);
 		});
+		$(".dl_toggle").click(function() {
+			if($("#dlc").is(':visible')) {
+				//hide
+				$("#dlc").slideUp();
+				$(".dl_toggle #transition").text("open");
+			} else {
+				//show
+				$("#dlc").slideDown();
+				$(".dl_toggle #transition").text("close");
+			}
+		});
 	});
   </script>
 
@@ -34,12 +45,16 @@
   	</aside>
 
   	<section id="main_section">
-  		<article id="article" class="noise">
-  			<a href="http://blog.robinschoors.com">
-	  			<div id="transition" class="noise">visit</div>
-	  			<p class="name">tech blog</p>
-	  		</a>
+  		<article id="article" class="noise dl_toggle">
+	  			<div id="transition" class="noise">open</div>
+	  			<p class="name">downloads</p>
   		</article>
+
+		<div id="dlc">
+			<ul>
+				<li><a href="http://static.robinschoors.com/school/bmi.html">JavaScript: BMI Calculator using functions</li>
+			</ul>
+		</div>
 
   		<article id="article" class="noise">
   			<a href="http://paste.robinschoors.com">
