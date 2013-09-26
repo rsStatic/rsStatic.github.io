@@ -10,7 +10,7 @@ var gewicht = parseFloat(prompt('Gewicht (kg):'));
 var bmi = (gewicht / (lengte*lengte));
 var ideaal_gewicht = Math.round((lengte*lengte)*25);
 
-if (gewicht < 0 || gewicht > 500 || lengte < 0.4 || lengte > 3 || isNaN(lengte) || isNaN(gewicht)) {
+if (gewicht < 30 || gewicht > 500 || lengte < 0.4 || lengte > 3 || isNaN(lengte) || isNaN(gewicht)) {
 	alert('Error! Probeer opnieuw (met geldige waarden).');
 } else if (bmi < 18) {
 	alert('ondergewicht');
