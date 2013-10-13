@@ -1,0 +1,17 @@
+* {
+	margin:0;
+	padding:0;
+	border:none;
+	font-family:sans-serif;
+	box-sizing:border-box;
+}
+
+body {
+	background:#000;
+}
+
+canvas {
+	border:5px solid white;
+	margin:10px auto;
+	display:block;
+}
